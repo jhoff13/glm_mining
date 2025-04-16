@@ -24,7 +24,7 @@ MASK_TOKEN_ID = tokenizer.mask_token_id
 TQDM_BAR_FORMAT = '{l_bar}{bar}| {n_fmt}/{total_fmt} [elapsed: {elapsed} remaining: {remaining}]'
 
 def get_args():
-    parser = argparse.ArgumentParser(description="Compute and save the Cat Jacs of CDS with specified 5' or 3' Intergenic Sequence from a Jett formatted csv format.")
+    parser = argparse.ArgumentParser(description="Compute and save the Cat Jacs with input csv including: 'seq_a', 'seq_b', 'seq_a_name', 'seq_b_name'.")
     parser.add_argument('-i','--input', type=str, help='Path to input csv with "csd_seq" and "five_prime_igs"/"three_prime_igs".')
     parser.add_argument('-o','--out_dir', type=str, help='Output directory where results will be saved.')
     parser.add_argument('-f','--fast', type=bool, default=False, help='Run in fast mode with just masking. [Default: False]')
